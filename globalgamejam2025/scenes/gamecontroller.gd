@@ -18,6 +18,12 @@ func _delay_player_input():
 	for player in players:
 		player.set_input_enabled(false)  # Disable movement
 		$"../Timer".start()
+		
+		
+	
+
+
+func _on_timer_timeout() -> void:
+	for player in players:
 		player.set_input_enabled(true)  # Enable movement after delay
 		print("Player input is now enabled.")
-	
