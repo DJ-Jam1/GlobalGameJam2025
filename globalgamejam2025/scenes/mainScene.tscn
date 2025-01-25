@@ -1,17 +1,62 @@
-[gd_scene load_steps=3 format=3 uid="uid://c705wbqjxlrb5"]
+[gd_scene load_steps=7 format=3 uid="uid://c705wbqjxlrb5"]
 
-[ext_resource type="Material" uid="uid://cc6bbgwmjwt4k" path="res://bubble.tres" id="1_ey78d"]
+[ext_resource type="Material" uid="uid://cc6bbgwmjwt4k" path="res://art/shaders/bubble.tres" id="1_ey78d"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_lm5qq"]
+[ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_g06hq"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_t85t1"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7nbcd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8sdgx"]
 
 [node name="MainScene" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.877528, 26.2648, 15.2579)
+light_energy = 11.947
+omni_range = 94.519
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0974803, 20.7901, 20)
 fov = 80.0
 near = 0.04
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.8994, 0)
-mesh = SubResource("SphereMesh_g06hq")
-surface_material_override/0 = ExtResource("1_ey78d")
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166386, 20, 0)
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+motion_mode = 1
+script = ExtResource("1_lm5qq")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Player"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("BoxShape3D_t85t1")
+
+[node name="Bubble" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Bubble"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+rings = 10
+material = ExtResource("1_ey78d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bubble"]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0, 0, 0)
+shape = SubResource("SphereShape3D_7nbcd")
+disabled = true
+
+[node name="StageFloor" type="StaticBody3D" parent="."]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, -3.14623, -6.83924)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StageFloor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StageFloor"]
+shape = SubResource("BoxShape3D_8sdgx")
+
+[node name="Background" type="StaticBody3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 20.3497, -36.269)
+
+[node name="Sprite3D" type="Sprite3D" parent="Background"]
+texture = ExtResource("3_06gdc")
