@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 signal knockback
 
+const NAME = 'player'
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var knockback_direction = Vector2();
@@ -44,3 +45,7 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("attack")):
 		print("Attack")
+
+
+func _on_bubble_destroy() -> void:
+	print('Death')

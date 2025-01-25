@@ -41,5 +41,4 @@ texture = ExtResource("3_06gdc")
 [node name="Bubble" parent="." instance=ExtResource("4_4wbvo")]
 
 [connection signal="knockback" from="Player" to="crate" method="_on_player_knockback"]
-[connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
 [connection signal="destroy" from="Bubble" to="crate" method="_on_bubble_destroy"]
