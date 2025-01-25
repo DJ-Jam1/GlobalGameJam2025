@@ -1,10 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://c705wbqjxlrb5"]
 
 [ext_resource type="Material" uid="uid://cc6bbgwmjwt4k" path="res://art/shaders/bubble.tres" id="1_ey78d"]
-[ext_resource type="Script" path="res://scenes/player.gd" id="1_lm5qq"]
 [ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_t85t1"]
+[ext_resource type="PackedScene" uid="uid://beg6i0etumxch" path="res://scenes/player.tscn" id="3_7p3qw"]
+[ext_resource type="PackedScene" uid="uid://dyjim4o8p3l3k" path="res://scenes/crate_2.tscn" id="4_4bfwh"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7nbcd"]
 
@@ -22,17 +21,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0974803, 20.7901, 20)
 fov = 80.0
 near = 0.04
 
-[node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166386, 20, 0)
-axis_lock_angular_x = true
-axis_lock_angular_z = true
-motion_mode = 1
-script = ExtResource("1_lm5qq")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Player"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-shape = SubResource("BoxShape3D_t85t1")
+[node name="Player" parent="." instance=ExtResource("3_7p3qw")]
 
 [node name="Bubble" type="AnimatableBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
@@ -60,3 +49,10 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 20.3497, -36.269)
 
 [node name="Sprite3D" type="Sprite3D" parent="Background"]
 texture = ExtResource("3_06gdc")
+
+[node name="Crate2" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00854, 20.3385, 0.934964)
+collision_layer = 4
+collision_mask = 6
+
+[connection signal="knockback" from="Player" to="Crate2" method="_on_player_knockback"]

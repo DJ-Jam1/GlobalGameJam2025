@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyjim4o8p3l3k"]
+
+[ext_resource type="Script" path="res://scenes/crate.gd" id="1_gau5g"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ogx5o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_44qqf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_122et"]
+
+[node name="Crate2" type="RigidBody3D"]
+mass = 0.001
+script = ExtResource("1_gau5g")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+mesh = SubResource("BoxMesh_ogx5o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_44qqf")
+
+[node name="hitbox" type="Area3D" parent="."]
+transform = Transform3D(1.18879, 0, 0, 0, 1.07202, 0, 0, 0, 1.07202, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox"]
+shape = SubResource("BoxShape3D_122et")

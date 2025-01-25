@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://172os72nii4k"]
+
+[ext_resource type="Script" path="res://scenes/crate.gd" id="1_m8at4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l4vxy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b46fy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fhjqb"]
+
+[node name="Crate" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46744, 19.9961, 0)
+collision_layer = 4
+collision_mask = 6
+
+[node name="Crate" type="CharacterBody3D" parent="."]
+script = ExtResource("1_m8at4")
+
+[node name="Node3D" type="Node3D" parent="Crate"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Crate/Node3D"]
+mesh = SubResource("BoxMesh_l4vxy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Crate"]
+shape = SubResource("BoxShape3D_b46fy")
+
+[node name="hitbox" type="Area3D" parent="Crate"]
+transform = Transform3D(1.18879, 0, 0, 0, 1.07202, 0, 0, 0, 1.07202, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Crate/hitbox"]
+shape = SubResource("BoxShape3D_fhjqb")
