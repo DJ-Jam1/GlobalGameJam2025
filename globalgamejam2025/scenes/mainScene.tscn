@@ -60,6 +60,7 @@ health = 5
 [node name="TimeCounter" parent="GameManager" instance=ExtResource("1_o0xwp")]
 
 [node name="spawner" parent="GameManager" instance=ExtResource("8_gxg3m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76837e-07, 51.3869, -2.84947)
 mob_scene = ExtResource("4_4bfwh")
 
 [connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
