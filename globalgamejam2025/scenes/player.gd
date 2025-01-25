@@ -9,20 +9,21 @@ const JUMP_VELOCITY = 4.5
 var knockback_direction = Vector2();
 var knockback_wait = 10;
 var direction;
+@export var player_id = 1
 
 
 	
 func _process(delta):
 	if input_enabled:
 		print('lets get moving');
-	if (Input.is_action_just_pressed("attack")):
+	if (Input.is_action_just_pressed("attack_%"%[player_id])):
 		print("Attack")
 
 
 func _physics_process(delta: float) -> void:
 	if (input_enabled):
 		
-		if (Input.is_action_just_pressed("attack")):
+		if (Input.is_action_just_pressed("attack_%"%[player_id])):
 			$AnimationPlayer.play("attack_animation")
 	
 		# Add the gravity.
@@ -41,7 +42,8 @@ func _physics_process(delta: float) -> void:
 			
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-		var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		var input_dir := Input.get_vector("move_left_%s"%[player_id], "move_right_%s"%[player_id], 
+										"move_up_%s"%[player_id], "move_down_%s"%[player_id])
 		direction = (transform.basis * Vector3(input_dir.x,input_dir.y ,0 )).normalized()
 		if direction:
 			velocity.x = direction.x * SPEED

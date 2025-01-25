@@ -40,9 +40,17 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 40, 0)
 [node name="Player" parent="." instance=ExtResource("3_7p3qw")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.4787, 36.1385, 0)
 
+[node name="Player2" parent="." instance=ExtResource("3_7p3qw")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.9258, 36.1385, 0)
+player_id = 2
+
 [node name="crate" parent="." instance=ExtResource("4_4bfwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36.2525, 0)
 
 [node name="GameManager" parent="." instance=ExtResource("5_hntjq")]
 
+[connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
+[connection signal="destroy" from="Bubble" to="Player2" method="_on_bubble_destroy"]
+[connection signal="destroy" from="Bubble" to="crate" method="_on_bubble_destroy"]
 [connection signal="knockback" from="Player" to="crate" method="_on_player_knockback"]
+[connection signal="knockback" from="Player2" to="crate" method="_on_player_knockback"]
