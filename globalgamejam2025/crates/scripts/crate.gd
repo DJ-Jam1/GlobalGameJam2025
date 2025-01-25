@@ -1,10 +1,14 @@
 extends RigidBody3D
+
+signal addScore1
+signal addScore2
 const NAME = 'crate'
 var knockback_dir
 var knockback
 var knock_force = 20;
 var dir =1;
 @export var health = 0
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -31,6 +35,7 @@ func _on_player_knockback() -> void:
 	if (health >= 0):
 		await take_damage(1)
 	if (health == 0) :
+		emit_signal("addScore1");
 		death();
 
 
@@ -43,9 +48,8 @@ func take_damage(damage:float)-> void:
 func death()->void:
 	queue_free()
 	
-
-
 func _on_player_2_knockback() -> void:
+	
 	   # Adjust as needed
 	var random_direction = Vector3(randf_range(-1, 1), randf_range(-1, 1), 0).normalized();
 	var random_rotation = Vector3(randf_range(-1, 1), randf_range(-1, 1),randf_range(-1, 1)).normalized();
@@ -56,4 +60,9 @@ func _on_player_2_knockback() -> void:
 	if (health >= 0):
 		await take_damage(1)
 	elif (health <=0) :
+		emit_signal("addScore1");
 		await death();
+
+
+
+	

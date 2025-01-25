@@ -1,12 +1,18 @@
-extends Node3D
+extends Node
 # Reference to the player node
 
 var input_enabled = false  # Variable to track if input is enabled
-
+@export var win_condition = "You Win"
 var players: Array
+var player_1_score=0
+var player_1_label = Label
+var player_2_score=0
+var player_2_label = Label
 
 
 func _ready():
+	player_1_label = $PlayerScores/PlayerOneScore/Label
+	player_2_label = $PlayerScores/PlayerTwoScore/Label
 	players = get_tree().get_nodes_in_group("players")
 	if players.size() > 0:
 		var player = players[0]  # Assuming there's only one player
@@ -22,11 +28,23 @@ func _delay_player_input():
 		%Timer.start()
 		
 		
-	
-
-
 func _on_timer_timeout() -> void:
 	for player in players:
 		player.set_input_enabled(true)  # Enable movement after delay
 		print("Player input is now enabled.")
 		
+
+
+func _on_crate_add_score_1() -> void:
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+	
+
+
+func _on_crate_add_score_2() -> void:
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_label.text = "Player 2 Score: " + str(toalScore)

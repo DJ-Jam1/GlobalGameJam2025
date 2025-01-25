@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://c705wbqjxlrb5"]
+[gd_scene load_steps=9 format=3 uid="uid://c705wbqjxlrb5"]
 
+[ext_resource type="PackedScene" uid="uid://bvuqn5fwgyjvk" path="res://art/visuals/ui/control.tscn" id="1_o0xwp"]
 [ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
 [ext_resource type="PackedScene" uid="uid://beg6i0etumxch" path="res://player/player.tscn" id="3_7p3qw"]
 [ext_resource type="PackedScene" uid="uid://dyjim4o8p3l3k" path="res://crates/crate.tscn" id="4_4bfwh"]
 [ext_resource type="PackedScene" uid="uid://duxjncw0tg5ov" path="res://bubbleArena/bubbleAreana.tscn" id="4_4wbvo"]
 [ext_resource type="PackedScene" uid="uid://h0k8rbv5y06v" path="res://gameManager/game_manager.tscn" id="5_hntjq"]
-[ext_resource type="PackedScene" uid="uid://rrxlxwyc335u" path="res://art/visuals/ui/interface.tscn" id="6_n8xtc"]
+[ext_resource type="PackedScene" uid="uid://cfym38hh3imir" path="res://art/visuals/ui/player_scores.tscn" id="6_kgpaf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8sdgx"]
 
@@ -49,14 +50,18 @@ player_id = 2
 [node name="crate" parent="." instance=ExtResource("4_4bfwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36.2525, 0)
 collision_mask = 2
-health = 10
+health = 5
 
 [node name="GameManager" parent="." instance=ExtResource("5_hntjq")]
 
-[node name="Interface" parent="." instance=ExtResource("6_n8xtc")]
+[node name="PlayerScores" parent="GameManager" instance=ExtResource("6_kgpaf")]
+
+[node name="TimeCounter" parent="GameManager" instance=ExtResource("1_o0xwp")]
 
 [connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
 [connection signal="destroy" from="Bubble" to="Player2" method="_on_bubble_destroy"]
 [connection signal="destroy" from="Bubble" to="crate" method="_on_bubble_destroy"]
 [connection signal="knockback" from="Player" to="crate" method="_on_player_knockback"]
 [connection signal="knockback" from="Player2" to="crate" method="_on_player_2_knockback"]
+[connection signal="addScore1" from="crate" to="GameManager" method="_on_crate_add_score_1"]
+[connection signal="addScore2" from="crate" to="GameManager" method="_on_crate_add_score_2"]

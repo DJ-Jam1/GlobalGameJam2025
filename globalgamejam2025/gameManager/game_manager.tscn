@@ -1,14 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://h0k8rbv5y06v"]
 
-[ext_resource type="Script" path="res://gameManager/gamecontroller.gd" id="1_smbuf"]
+[ext_resource type="Script" path="res://gameManager/game_manager.gd" id="1_smbuf"]
 
 [node name="GameManager" type="Node"]
+script = ExtResource("1_smbuf")
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 3.0
 
-[node name="Controller" type="Node3D" parent="."]
-script = ExtResource("1_smbuf")
-
-[connection signal="timeout" from="Timer" to="Controller" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

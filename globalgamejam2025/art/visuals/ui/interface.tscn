@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://rrxlxwyc335u"]
-
-[ext_resource type="PackedScene" uid="uid://bvuqn5fwgyjvk" path="res://art/visuals/ui/control.tscn" id="1_ekggr"]
+[gd_scene format=3 uid="uid://rrxlxwyc335u"]
 
 [node name="Interface" type="Control"]
 layout_mode = 3
@@ -9,6 +7,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TimeCounter" parent="." instance=ExtResource("1_ekggr")]
-layout_mode = 1
