@@ -1,10 +1,6 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c80aujdqwt0po"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c80aujdqwt0po"]
 
-[ext_resource type="FontFile" uid="uid://x5l1aie2wlhp" path="res://art/visuals/ui/kenney_ui-pack/Font/Kenney Future Narrow.ttf" id="1_nfncb"]
 [ext_resource type="FontFile" uid="uid://crmylb33e1tfm" path="res://art/visuals/ui/kenney_ui-pack/Font/Kenney Future.ttf" id="2_tsp4j"]
 
 [resource]
-default_font = ExtResource("2_tsp4j")
-default_font_size = 25
-Label/colors/font_color = Color(1, 1, 1, 1)
-Label/fonts/font = ExtResource("1_nfncb")
+Label/fonts/font = ExtResource("2_tsp4j")

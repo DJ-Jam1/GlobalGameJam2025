@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c705wbqjxlrb5"]
+[gd_scene load_steps=10 format=3 uid="uid://c705wbqjxlrb5"]
 
 [ext_resource type="PackedScene" uid="uid://bvuqn5fwgyjvk" path="res://art/visuals/ui/TimeCounter.tscn" id="1_o0xwp"]
 [ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://duxjncw0tg5ov" path="res://bubbleArena/bubbleAreana.tscn" id="4_4wbvo"]
 [ext_resource type="PackedScene" uid="uid://h0k8rbv5y06v" path="res://gameManager/game_manager.tscn" id="5_hntjq"]
 [ext_resource type="PackedScene" uid="uid://cfym38hh3imir" path="res://art/visuals/ui/player_scores.tscn" id="6_kgpaf"]
+[ext_resource type="PackedScene" uid="uid://2g44y0dqng36" path="res://gameManager/spawner.tscn" id="8_gxg3m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8sdgx"]
 
@@ -38,17 +39,17 @@ modulate = Color(0, 0, 0, 1)
 texture = ExtResource("3_06gdc")
 
 [node name="Bubble" parent="." instance=ExtResource("4_4wbvo")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 40, 0)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 40, -5.62927)
 
 [node name="Player" parent="." instance=ExtResource("3_7p3qw")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.4787, 36.1385, 0)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.4787, 36.1385, -5.62927)
 
 [node name="Player2" parent="." instance=ExtResource("3_7p3qw")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.9258, 36.1385, 0)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.9258, 36.1385, -5.62927)
 player_id = 2
 
 [node name="crate" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36.2525, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36.2525, -5.62927)
 collision_mask = 2
 health = 5
 
@@ -57,6 +58,9 @@ health = 5
 [node name="PlayerScores" parent="GameManager" instance=ExtResource("6_kgpaf")]
 
 [node name="TimeCounter" parent="GameManager" instance=ExtResource("1_o0xwp")]
+
+[node name="spawner" parent="GameManager" instance=ExtResource("8_gxg3m")]
+mob_scene = ExtResource("4_4bfwh")
 
 [connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
 [connection signal="destroy" from="Bubble" to="Player2" method="_on_bubble_destroy"]
