@@ -3,7 +3,7 @@
 [ext_resource type="Material" uid="uid://cc6bbgwmjwt4k" path="res://art/shaders/bubble.tres" id="1_ey78d"]
 [ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
 [ext_resource type="PackedScene" uid="uid://beg6i0etumxch" path="res://scenes/player.tscn" id="3_7p3qw"]
-[ext_resource type="PackedScene" uid="uid://dyjim4o8p3l3k" path="res://scenes/crate_2.tscn" id="4_4bfwh"]
+[ext_resource type="PackedScene" uid="uid://dyjim4o8p3l3k" path="res://scenes/crate.tscn" id="4_4bfwh"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7nbcd"]
 

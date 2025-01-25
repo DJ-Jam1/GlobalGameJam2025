@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	for body  in $hotbox.get_overlapping_bodies():
-		if knockback_wait <= 0 and body.get("NAME")== "Crate2":
+		if knockback_wait <= 0 and body.get("NAME")== "crate":
 			emit_signal("knockback");
 			knockback_wait =10;
 	knockback_wait -=1;
