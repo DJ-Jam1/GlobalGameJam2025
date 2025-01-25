@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c705wbqjxlrb5"]
+[gd_scene load_steps=7 format=3 uid="uid://c705wbqjxlrb5"]
 
 [ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
 [ext_resource type="PackedScene" uid="uid://beg6i0etumxch" path="res://scenes/player.tscn" id="3_7p3qw"]
 [ext_resource type="PackedScene" uid="uid://dyjim4o8p3l3k" path="res://scenes/crate.tscn" id="4_4bfwh"]
 [ext_resource type="PackedScene" uid="uid://duxjncw0tg5ov" path="res://scenes/bubbleAreana.tscn" id="4_4wbvo"]
+[ext_resource type="PackedScene" uid="uid://h0k8rbv5y06v" path="res://scenes/game_manager.tscn" id="5_hntjq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8sdgx"]
 
@@ -15,14 +16,9 @@ light_energy = 11.947
 omni_range = 94.519
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0974803, 20.7901, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.097, 45, 50)
 fov = 80.0
 near = 0.04
-
-[node name="Player" parent="." instance=ExtResource("3_7p3qw")]
-
-[node name="crate" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74454, 19.8539, 0)
 
 [node name="StageFloor" type="StaticBody3D" parent="."]
 transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, -3.14623, -6.83924)
@@ -39,7 +35,14 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 20.3497, -36.269)
 texture = ExtResource("3_06gdc")
 
 [node name="Bubble" parent="." instance=ExtResource("4_4wbvo")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 40, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_7p3qw")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.4787, 36.1385, 0)
+
+[node name="crate" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36.2525, 0)
+
+[node name="GameManager" parent="." instance=ExtResource("5_hntjq")]
 
 [connection signal="knockback" from="Player" to="crate" method="_on_player_knockback"]
-[connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
-[connection signal="destroy" from="Bubble" to="crate" method="_on_bubble_destroy"]

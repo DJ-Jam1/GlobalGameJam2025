@@ -8,7 +8,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_u83od"]
 
 [node name="Bubble" type="AnimatableBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 collision_mask = 6
 script = ExtResource("1_3a7ya")
 

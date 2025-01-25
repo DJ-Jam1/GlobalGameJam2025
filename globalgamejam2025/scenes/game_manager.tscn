@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://h0k8rbv5y06v"]
+
+[ext_resource type="Script" path="res://scenes/gamecontroller.gd" id="1_smbuf"]
+
+[node name="GameManager" type="Node"]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="Controller" type="Node3D" parent="."]
+script = ExtResource("1_smbuf")

@@ -12,20 +12,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-
-
-
-
-
-
-	
-
-
-
-	
-	
-
-
 func _on_hitbox_body_shape_exited(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
 	if body.name == "crate":  # Use `name` property instead of "NAME"
 			emit_signal("destroy")

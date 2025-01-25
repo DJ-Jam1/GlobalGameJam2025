@@ -3,6 +3,7 @@ extends CharacterBody3D
 signal knockback
 
 const NAME = 'player'
+var input_enabled = true  # Initially, input is enabled
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var knockback_direction = Vector2();
@@ -10,6 +11,12 @@ var knockback_wait = 10;
 var direction;
 
 
+	
+func _process(delta):
+	if input_enabled:
+		print('lets get moving');
+	if (Input.is_action_just_pressed("attack")):
+		print("Attack")
 
 
 func _physics_process(delta: float) -> void:
@@ -42,10 +49,13 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, SPEED) 
 
 	move_and_slide()
-func _process(delta: float) -> void:
-	if (Input.is_action_just_pressed("attack")):
-		print("Attack")
+
+	
 
 
 func _on_bubble_destroy() -> void:
 	print('Death')
+	
+# Methods to enable/disable movement
+func set_input_enabled(enabled: bool):
+	input_enabled = enabled
