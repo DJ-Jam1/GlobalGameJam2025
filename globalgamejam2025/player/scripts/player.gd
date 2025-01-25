@@ -14,15 +14,12 @@ var direction;
 
 	
 func _process(delta):
-	if input_enabled:
-		print('lets get moving');
 	if (Input.is_action_just_pressed("attack_%"%[player_id])):
 		print("Attack")
 
 
 func _physics_process(delta: float) -> void:
 	if (input_enabled):
-		
 		if (Input.is_action_just_pressed("attack_%"%[player_id])):
 			$AnimationPlayer.play("attack_animation")
 	
@@ -34,7 +31,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
 
-		for body  in $hotbox.get_overlapping_bodies():
+		for body  in $hitbox.get_overlapping_bodies():
 			if knockback_wait <= 0 and body.get("NAME")== "crate":
 				emit_signal("knockback");
 				knockback_wait =10;

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://beg6i0etumxch"]
 
-[ext_resource type="Script" path="res://scenes/player.gd" id="1_1jqce"]
+[ext_resource type="Script" path="res://player/scripts/player.gd" id="1_1jqce"]
 [ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="2_jaxg4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qf67q"]
@@ -11,11 +11,11 @@ albedo_texture = ExtResource("2_jaxg4")
 [sub_resource type="BoxShape3D" id="BoxShape3D_x1qjh"]
 
 [sub_resource type="Animation" id="Animation_ki6ru"]
-length = 0.001
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("hotbox/CollisionShape3D:disabled")
+tracks/0/path = NodePath("hitbox/CollisionShape3D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -31,7 +31,7 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("hotbox/CollisionShape3D:disabled")
+tracks/0/path = NodePath("hitbox/CollisionShape3D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -62,12 +62,12 @@ material_override = SubResource("StandardMaterial3D_qf67q")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_1i64l")
 
-[node name="hotbox" type="Area3D" parent="."]
+[node name="hitbox" type="Area3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 collision_layer = 4
 collision_mask = 6
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="hotbox"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox"]
 shape = SubResource("BoxShape3D_x1qjh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -9,7 +9,7 @@ func _ready():
 	players = get_tree().get_nodes_in_group("players")
 	if players.size() > 0:
 		var player = players[0]  # Assuming there's only one player
-		print(player)  # This should print the player node
+		#print(player)  # This should print the player node
 		_delay_player_input()
 	
 
@@ -17,7 +17,7 @@ func _ready():
 func _delay_player_input():
 	for player in players:
 		player.set_input_enabled(false)  # Disable movement
-		$"../Timer".start()
+		%Timer.start()
 		
 		
 	
