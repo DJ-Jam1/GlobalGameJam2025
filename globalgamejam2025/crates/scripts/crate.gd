@@ -30,8 +30,8 @@ func _on_player_knockback() -> void:
 	apply_force(knockback_vector, Vector3.ZERO);
 	if (health >= 0):
 		await take_damage(1)
-	elif (health ==0) :
-		 death();
+	if (health == 0) :
+		death();
 
 
 func _on_bubble_destroy() -> void:
