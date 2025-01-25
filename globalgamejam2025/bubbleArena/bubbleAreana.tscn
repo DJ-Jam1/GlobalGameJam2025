@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://duxjncw0tg5ov"]
 
-[ext_resource type="Script" path="res://scenes/bubble_areana.gd" id="1_3a7ya"]
+[ext_resource type="Script" path="res://bubbleArena/bubble_areana.gd" id="1_3a7ya"]
 [ext_resource type="Material" uid="uid://cc6bbgwmjwt4k" path="res://art/shaders/bubble.tres" id="1_c3yl8"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7nbcd"]

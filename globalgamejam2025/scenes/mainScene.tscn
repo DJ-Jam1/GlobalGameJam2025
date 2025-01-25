@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c705wbqjxlrb5"]
+[gd_scene load_steps=8 format=3 uid="uid://c705wbqjxlrb5"]
 
 [ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
 [ext_resource type="PackedScene" uid="uid://beg6i0etumxch" path="res://player/player.tscn" id="3_7p3qw"]
 [ext_resource type="PackedScene" uid="uid://dyjim4o8p3l3k" path="res://crates/crate.tscn" id="4_4bfwh"]
-[ext_resource type="PackedScene" uid="uid://duxjncw0tg5ov" path="res://scenes/bubbleAreana.tscn" id="4_4wbvo"]
-[ext_resource type="PackedScene" uid="uid://h0k8rbv5y06v" path="res://scenes/game_manager.tscn" id="5_hntjq"]
+[ext_resource type="PackedScene" uid="uid://duxjncw0tg5ov" path="res://bubbleArena/bubbleAreana.tscn" id="4_4wbvo"]
+[ext_resource type="PackedScene" uid="uid://h0k8rbv5y06v" path="res://gameManager/game_manager.tscn" id="5_hntjq"]
+[ext_resource type="PackedScene" uid="uid://rrxlxwyc335u" path="res://art/visuals/ui/interface.tscn" id="6_n8xtc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8sdgx"]
 
@@ -32,6 +33,7 @@ shape = SubResource("BoxShape3D_8sdgx")
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 20.3497, -36.269)
 
 [node name="Sprite3D" type="Sprite3D" parent="Background"]
+modulate = Color(0, 0, 0, 1)
 texture = ExtResource("3_06gdc")
 
 [node name="Bubble" parent="." instance=ExtResource("4_4wbvo")]
@@ -50,6 +52,8 @@ collision_mask = 2
 health = 10
 
 [node name="GameManager" parent="." instance=ExtResource("5_hntjq")]
+
+[node name="Interface" parent="." instance=ExtResource("6_n8xtc")]
 
 [connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
 [connection signal="destroy" from="Bubble" to="Player2" method="_on_bubble_destroy"]

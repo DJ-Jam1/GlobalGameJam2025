@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://h0k8rbv5y06v"]
 
-[ext_resource type="Script" path="res://scenes/gamecontroller.gd" id="1_smbuf"]
+[ext_resource type="Script" path="res://gameManager/gamecontroller.gd" id="1_smbuf"]
 
 [node name="GameManager" type="Node"]
 
