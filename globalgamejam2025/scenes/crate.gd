@@ -22,7 +22,8 @@ func _on_player_knockback() -> void:
 	print('Apply Knockback')
 	   # Adjust as needed
 	var random_direction = Vector3(randf_range(-1, 1), randf_range(-1, 1), 0).normalized();
-	var knockback_vector = random_direction * knock_force;
+	var random_rotation = Vector3(randf_range(-1, 1), randf_range(-1, 1),randf_range(-1, 1)).normalized();
+	var knockback_vector = (random_direction * random_rotation) * knock_force;
 	print(knockback_vector);
 	# Use add_force instead of apply_impulse
 	apply_force(knockback_vector, Vector3.ZERO);

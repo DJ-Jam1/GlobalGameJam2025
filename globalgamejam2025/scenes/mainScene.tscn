@@ -51,8 +51,6 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 20.3497, -36.269)
 texture = ExtResource("3_06gdc")
 
 [node name="Crate2" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00854, 20.3385, 0.934964)
-collision_layer = 4
-collision_mask = 6
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.758267, 20.3385, -0.0295317)
 
 [connection signal="knockback" from="Player" to="Crate2" method="_on_player_knockback"]
