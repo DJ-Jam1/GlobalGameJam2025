@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c705wbqjxlrb5"]
 
-[ext_resource type="PackedScene" uid="uid://bvuqn5fwgyjvk" path="res://art/visuals/ui/control.tscn" id="1_o0xwp"]
+[ext_resource type="PackedScene" uid="uid://bvuqn5fwgyjvk" path="res://art/visuals/ui/TimeCounter.tscn" id="1_o0xwp"]
 [ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
 [ext_resource type="PackedScene" uid="uid://beg6i0etumxch" path="res://player/player.tscn" id="3_7p3qw"]
 [ext_resource type="PackedScene" uid="uid://dyjim4o8p3l3k" path="res://crates/crate.tscn" id="4_4bfwh"]
@@ -65,3 +65,4 @@ health = 5
 [connection signal="knockback" from="Player2" to="crate" method="_on_player_2_knockback"]
 [connection signal="addScore1" from="crate" to="GameManager" method="_on_crate_add_score_1"]
 [connection signal="addScore2" from="crate" to="GameManager" method="_on_crate_add_score_2"]
+[connection signal="roundOver" from="GameManager/TimeCounter" to="GameManager" method="_on_time_counter_round_over"]
