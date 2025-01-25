@@ -4,7 +4,7 @@ signal knockback
 
 const NAME = 'player'
 var input_enabled = false  # Initially, input is enabled
-const SPEED = 5.0
+const SPEED = 25
 const JUMP_VELOCITY = 4.5
 var knockback_direction = Vector2();
 var knockback_wait = 10;
