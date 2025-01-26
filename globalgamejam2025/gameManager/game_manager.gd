@@ -73,10 +73,12 @@ func _on_time_counter_round_over() -> void:
 		print('player 1 wins')
 		win_condition_label.text = "Player 1 is the winner"
 		$backtoMenuTimer.start()
+		return
 	if player_1_score < player_2_score:
 		print('player 2 wins')
 		win_condition_label.text = "Player 2 is the winner"
 		$backtoMenuTimer.start()
+		return
 		
 	else:
 		print('NOBODY wins')

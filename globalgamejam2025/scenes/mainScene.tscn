@@ -73,22 +73,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5711, 132.848, -6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1789, 320.636, -6)
 
 [node name="crate5" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45129, 350.226, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45129, 393.797, -6)
 
 [node name="crate6" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 354.737, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 398.308, -6)
 
 [node name="crate7" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 333.46, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 356.368, -6)
 
 [node name="crate8" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2041, 334.542, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2041, 357.45, -6)
 
 [node name="crate9" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6752, 337.973, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6752, 360.881, -6)
 
 [node name="crate10" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14023, 255.159, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.11362, 287.724, -7.1855)
 
 [node name="crate11" parent="." instance=ExtResource("4_4bfwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.27603, 316.797, -6)
@@ -97,7 +97,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.27603, 316.797, -6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 322.856, -6)
 
 [node name="crate13" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9641, 249.4, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.93749, 281.966, -7.1855)
 
 [node name="crate14" parent="." instance=ExtResource("4_4bfwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9903, 242.197, -6)
@@ -112,7 +112,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.37861, 239.694, -6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0561, 177.784, -6)
 
 [node name="crate18" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 248.215, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.02661, 280.781, -7.1855)
 
 [node name="crate19" parent="." instance=ExtResource("4_4bfwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.042, 177.784, -6)
