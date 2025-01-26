@@ -11,6 +11,9 @@ var knockback_wait = 10;
 var direction;
 @export var player_id = 1
 
+var sphere_center = Vector3(0, 40, -5)  # Replace with actual sphere center
+var sphere_radius = 25  # Replace with your sphere's radius
+
 
 	
 func _process(delta):
@@ -19,6 +22,7 @@ func _process(delta):
 
 
 func _physics_process(delta: float) -> void:
+	
 	if (input_enabled):
 		if (Input.is_action_just_pressed("attack_%"%[player_id])):
 			$AnimationPlayer.play("attack_animation")
@@ -50,6 +54,12 @@ func _physics_process(delta: float) -> void:
 			velocity.y = move_toward(velocity.y, 0, SPEED) 
 
 		move_and_slide()
+		 # Check if the player is within the sphere
+		var distance_to_center = global_transform.origin.distance_to(sphere_center)
+		if distance_to_center > sphere_radius:
+		# Move player back inside the sphere
+			var direction_to_center = (sphere_center - global_transform.origin).normalized()
+			global_transform.origin = sphere_center - direction_to_center * sphere_radius
 
 	
 

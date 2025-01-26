@@ -60,7 +60,7 @@ func _on_player_2_knockback() -> void:
 	if (health >= 0):
 		await take_damage(1)
 	elif (health <=0) :
-		emit_signal("addScore1");
+		emit_signal("addScore2");
 		await death();
 
 

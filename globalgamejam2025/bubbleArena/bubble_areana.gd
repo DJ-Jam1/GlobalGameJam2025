@@ -1,4 +1,4 @@
-extends AnimatableBody3D
+extends Node3D
 
 signal destroy
 # Called when the node enters the scene tree for the first time.
