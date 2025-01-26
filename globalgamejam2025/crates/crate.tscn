@@ -1,8 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyjim4o8p3l3k"]
+[gd_scene load_steps=7 format=3 uid="uid://dyjim4o8p3l3k"]
 
 [ext_resource type="Script" path="res://crates/scripts/crate.gd" id="1_gau5g"]
+[ext_resource type="Texture2D" uid="uid://cdvssixyfxgyf" path="res://art/visuals/ui/kenney_ui-pack/PNG/Yellow/Default/star.png" id="2_tnpd7"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_ogx5o"]
+[sub_resource type="SphereMesh" id="SphereMesh_321qy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21b2k"]
+albedo_color = Color(0.968645, 0.954721, 0.958762, 1)
+albedo_texture = ExtResource("2_tnpd7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_44qqf"]
 
@@ -21,7 +26,8 @@ health = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
-mesh = SubResource("BoxMesh_ogx5o")
+mesh = SubResource("SphereMesh_321qy")
+surface_material_override/0 = SubResource("StandardMaterial3D_21b2k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)

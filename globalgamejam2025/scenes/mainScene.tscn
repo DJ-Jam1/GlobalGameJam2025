@@ -33,10 +33,10 @@ transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, -3.14623, -6.83924)
 shape = SubResource("BoxShape3D_8sdgx")
 
 [node name="Background" type="StaticBody3D" parent="."]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 20.3497, -36.269)
+transform = Transform3D(267.998, 0, 0, 0, 185.785, 0, 0, 0, 100, 0, 20.3497, -36.269)
 
 [node name="Sprite3D" type="Sprite3D" parent="Background"]
-modulate = Color(0, 0, 0, 1)
+modulate = Color(0.433703, 0.336803, 0.0947492, 1)
 texture = ExtResource("3_06gdc")
 
 [node name="Bubble" parent="." instance=ExtResource("4_4wbvo")]
