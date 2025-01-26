@@ -16,9 +16,7 @@ var sphere_radius = 25  # Replace with your sphere's radius
 
 
 	
-func _process(delta):
-	if (Input.is_action_just_pressed("attack_%"%[player_id])):
-		print("Attack")
+
 
 
 func _physics_process(delta: float) -> void:

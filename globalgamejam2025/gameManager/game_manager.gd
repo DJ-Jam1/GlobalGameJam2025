@@ -69,15 +69,20 @@ func _on_crate_add_score_2() -> void:
 
 func _on_time_counter_round_over() -> void:
 	win_condition_contatiner.visible =true
-	if player_1_score >= player_2_score:
+	if player_1_score > player_2_score:
 		print('player 1 wins')
 		win_condition_label.text = "Player 1 is the winner"
 		$backtoMenuTimer.start()
-		
-	else:
+	if player_1_score < player_2_score:
 		print('player 2 wins')
 		win_condition_label.text = "Player 2 is the winner"
 		$backtoMenuTimer.start()
+		
+	else:
+		print('NOBODY wins')
+		win_condition_label.text = "TIE !!"
+		$backtoMenuTimer.start()	
+		
 		
 
 

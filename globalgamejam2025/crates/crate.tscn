@@ -13,9 +13,9 @@ collision_layer = 4
 collision_mask = 2
 axis_lock_linear_z = true
 axis_lock_angular_z = true
-mass = 1000.0
+mass = 500.0
 script = ExtResource("1_gau5g")
-health = 3
+health = 2
 
 [node name="Node3D" type="Node3D" parent="."]
 

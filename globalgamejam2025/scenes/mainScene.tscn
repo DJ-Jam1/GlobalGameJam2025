@@ -59,67 +59,67 @@ unique_name_in_owner = true
 [node name="TimeCounter" parent="GameManager" instance=ExtResource("1_o0xwp")]
 
 [node name="crate" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 99, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 132.848, -6)
 
 [node name="crate2" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6327, 99, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6327, 132.848, -6)
 
 [node name="crate3" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5711, 99, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5711, 132.848, -6)
 
 [node name="crate4" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1789, 186.938, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1789, 320.636, -6)
 
 [node name="crate5" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45129, 216.527, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45129, 350.226, -6)
 
 [node name="crate6" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 221.038, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 354.737, -6)
 
 [node name="crate7" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 199.761, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 333.46, -6)
 
 [node name="crate8" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2041, 200.844, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2041, 334.542, -6)
 
 [node name="crate9" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6752, 204.275, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6752, 337.973, -6)
 
 [node name="crate10" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14023, 160.385, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14023, 255.159, -6)
 
 [node name="crate11" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.27603, 183.099, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.27603, 316.797, -6)
 
 [node name="crate12" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 189.158, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 322.856, -6)
 
 [node name="crate13" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9641, 154.627, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9641, 249.4, -6)
 
 [node name="crate14" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9903, 147.423, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9903, 242.197, -6)
 
 [node name="crate15" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5485, 156.44, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5485, 251.213, -6)
 
 [node name="crate16" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.37861, 144.92, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.37861, 239.694, -6)
 
 [node name="crate17" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0561, 124.474, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0561, 177.784, -6)
 
 [node name="crate18" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 153.442, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 248.215, -6)
 
 [node name="crate19" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.042, 124.474, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.042, 177.784, -6)
 
 [node name="crate20" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4769, 124.474, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4769, 177.784, -6)
 
 [node name="crate21" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 124.474, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 177.784, -6)
 
 [connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
 [connection signal="destroy" from="Bubble" to="Player2" method="_on_bubble_destroy"]
