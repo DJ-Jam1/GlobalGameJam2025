@@ -11,13 +11,8 @@ var knockback_wait = 10;
 var direction;
 @export var player_id = 1
 
-var sphere_center = Vector3(0, 40, -5)  # Replace with actual sphere center
-var sphere_radius = 25  # Replace with your sphere's radius
-
-
-	
-
-
+var sphere_center = Vector3(0, 40, -5)  
+var sphere_radius = 25  
 
 func _physics_process(delta: float) -> void:
 	

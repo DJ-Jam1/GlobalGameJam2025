@@ -14,10 +14,6 @@ var win_condition_label = Label
 
 
 func _ready():
-	
-	
-	
-
 
 	win_condition_contatiner = $PlayerScores/WinCondition
 	win_condition_label = $PlayerScores/WinCondition/Label
