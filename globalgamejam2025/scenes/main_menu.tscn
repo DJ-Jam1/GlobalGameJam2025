@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bpx5q24fp3j0m"]
+[gd_scene load_steps=12 format=3 uid="uid://bpx5q24fp3j0m"]
 
 [ext_resource type="Texture2D" uid="uid://crxux3puwnkgj" path="res://art/visuals/ui/kenney_ui-pack/PNG/Green/Default/button_rectangle_flat.png" id="1_j6ldg"]
+[ext_resource type="Material" uid="uid://cc6bbgwmjwt4k" path="res://art/shaders/bubble.tres" id="1_r5upp"]
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_y6eo2"]
 [ext_resource type="FontFile" uid="uid://crmylb33e1tfm" path="res://art/visuals/ui/kenney_ui-pack/Font/Kenney Future.ttf" id="2_j6udf"]
 [ext_resource type="Script" path="res://scenes/musicPlayer.gd" id="4_gfbhh"]
@@ -37,6 +38,7 @@ corner_radius_bottom_left = 16
 shadow_offset = Vector2(0, 4.34)
 
 [node name="MainMenu" type="Control"]
+material = ExtResource("1_r5upp")
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -108,7 +110,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 3
 theme_override_fonts/font = ExtResource("2_j6udf")
 theme_override_font_sizes/font_size = 60
-text = "Mega awesome brawl"
+text = "Bubble Brawl"
 horizontal_alignment = 1
 vertical_alignment = 1
 

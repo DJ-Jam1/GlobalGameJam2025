@@ -7,9 +7,9 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qf67q"]
 albedo_texture = ExtResource("2_jaxg4")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1i64l"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5fnic"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_x1qjh"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r4oyd"]
 
 [sub_resource type="Animation" id="Animation_ki6ru"]
 length = 0.3
@@ -95,7 +95,8 @@ visible = false
 material_override = SubResource("StandardMaterial3D_qf67q")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_1i64l")
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_5fnic")
 
 [node name="hitbox" type="Area3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
@@ -103,7 +104,8 @@ collision_layer = 4
 collision_mask = 6
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox"]
-shape = SubResource("BoxShape3D_x1qjh")
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_r4oyd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

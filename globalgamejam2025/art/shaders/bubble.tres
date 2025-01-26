@@ -11,8 +11,8 @@ noise = SubResource("FastNoiseLite_1du85")
 [resource]
 render_priority = 0
 shader = ExtResource("1_bccoy")
-shader_parameter/bubble_color = Color(0.26923, 0.482167, 0.890893, 1)
-shader_parameter/height_multiplier = 0.02
-shader_parameter/noise_sample_size = 0.5
+shader_parameter/bubble_color = Color(0.385168, 0.691225, 0.916046, 1)
+shader_parameter/height_multiplier = 0.075
+shader_parameter/noise_sample_size = 0.2
 shader_parameter/animation_speed = 0.1
 shader_parameter/noise_tex = SubResource("NoiseTexture2D_ystg8")

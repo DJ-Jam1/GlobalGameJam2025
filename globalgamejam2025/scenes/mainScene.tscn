@@ -15,9 +15,10 @@
 [node name="MainScene" type="Node3D"]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.877528, 26.2648, 15.2579)
-light_energy = 11.947
-omni_range = 94.519
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.14987, 45.8762, 2.99669)
+light_energy = 5.4
+omni_range = 44.032
+omni_attenuation = 0.898
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.097, 45, 50)
@@ -36,7 +37,6 @@ shape = SubResource("BoxShape3D_8sdgx")
 transform = Transform3D(267.998, 0, 0, 0, 185.785, 0, 0, 0, 100, 0, 20.3497, -36.269)
 
 [node name="Sprite3D" type="Sprite3D" parent="Background"]
-modulate = Color(0.433703, 0.336803, 0.0947492, 1)
 texture = ExtResource("3_06gdc")
 
 [node name="Bubble" parent="." instance=ExtResource("4_4wbvo")]
