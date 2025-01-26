@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c705wbqjxlrb5"]
+[gd_scene load_steps=11 format=3 uid="uid://c705wbqjxlrb5"]
 
 [ext_resource type="PackedScene" uid="uid://bvuqn5fwgyjvk" path="res://art/visuals/ui/TimeCounter.tscn" id="1_o0xwp"]
 [ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://duxjncw0tg5ov" path="res://bubbleArena/bubbleAreana.tscn" id="4_4wbvo"]
 [ext_resource type="PackedScene" uid="uid://h0k8rbv5y06v" path="res://gameManager/game_manager.tscn" id="5_hntjq"]
 [ext_resource type="PackedScene" uid="uid://cfym38hh3imir" path="res://art/visuals/ui/player_scores.tscn" id="6_kgpaf"]
+[ext_resource type="Script" path="res://scenes/musicPlayer.gd" id="8_xd7wb"]
+[ext_resource type="AudioStream" uid="uid://5latcinpvo04" path="res://art/audio/Juhani Junkala [Chiptune Adventures] WAV/Juhani Junkala [Chiptune Adventures] 3. Boss Fight.wav" id="9_5yqwx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8sdgx"]
 
@@ -120,6 +122,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4769, 177.784, -6)
 
 [node name="crate21" parent="." instance=ExtResource("4_4bfwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 177.784, -6)
+
+[node name="MusicPlayer" type="Node" parent="."]
+script = ExtResource("8_xd7wb")
+
+[node name="BGMusic" type="AudioStreamPlayer2D" parent="MusicPlayer"]
+unique_name_in_owner = true
+stream = ExtResource("9_5yqwx")
+autoplay = true
+bus = &"Music"
 
 [connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
 [connection signal="destroy" from="Bubble" to="Player2" method="_on_bubble_destroy"]

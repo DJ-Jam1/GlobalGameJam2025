@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bpx5q24fp3j0m"]
+[gd_scene load_steps=11 format=3 uid="uid://bpx5q24fp3j0m"]
 
 [ext_resource type="Texture2D" uid="uid://crxux3puwnkgj" path="res://art/visuals/ui/kenney_ui-pack/PNG/Green/Default/button_rectangle_flat.png" id="1_j6ldg"]
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_y6eo2"]
 [ext_resource type="FontFile" uid="uid://crmylb33e1tfm" path="res://art/visuals/ui/kenney_ui-pack/Font/Kenney Future.ttf" id="2_j6udf"]
+[ext_resource type="Script" path="res://scenes/musicPlayer.gd" id="4_gfbhh"]
+[ext_resource type="AudioStream" uid="uid://bvd18ttrapr0a" path="res://art/audio/Juhani Junkala [Chiptune Adventures] WAV/Juhani Junkala [Chiptune Adventures] 4. Stage Select.wav" id="4_r1frd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_54otj"]
 texture = ExtResource("1_j6ldg")
@@ -109,6 +111,15 @@ theme_override_font_sizes/font_size = 60
 text = "Mega awesome brawl"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MusicPlayer" type="Node" parent="."]
+script = ExtResource("4_gfbhh")
+
+[node name="BGMusic" type="AudioStreamPlayer2D" parent="MusicPlayer"]
+unique_name_in_owner = true
+stream = ExtResource("4_r1frd")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/QUIT" to="." method="_on_quit_pressed"]
