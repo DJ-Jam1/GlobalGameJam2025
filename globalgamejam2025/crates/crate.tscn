@@ -10,11 +10,12 @@
 
 [node name="crate" type="RigidBody3D"]
 collision_layer = 4
-collision_mask = 6
+collision_mask = 2
 axis_lock_linear_z = true
 axis_lock_angular_z = true
-mass = 0.1
+mass = 1000.0
 script = ExtResource("1_gau5g")
+health = 3
 
 [node name="Node3D" type="Node3D" parent="."]
 
@@ -28,6 +29,10 @@ shape = SubResource("BoxShape3D_44qqf")
 
 [node name="hitbox" type="Area3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox"]
 shape = SubResource("BoxShape3D_122et")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

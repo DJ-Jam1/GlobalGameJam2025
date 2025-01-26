@@ -79,7 +79,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="countdown" type="Timer" parent="Counter/Label"]
-wait_time = 10.0
+wait_time = 20.0
 autostart = true
 
 [connection signal="timeout" from="Counter/Label/countdown" to="." method="_on_countdown_timeout"]

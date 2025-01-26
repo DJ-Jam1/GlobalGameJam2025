@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://c705wbqjxlrb5"]
+
+[ext_resource type="PackedScene" uid="uid://bvuqn5fwgyjvk" path="res://art/visuals/ui/TimeCounter.tscn" id="1_o0xwp"]
+[ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
+[ext_resource type="PackedScene" uid="uid://beg6i0etumxch" path="res://player/player.tscn" id="3_7p3qw"]
+[ext_resource type="PackedScene" uid="uid://dyjim4o8p3l3k" path="res://crates/crate.tscn" id="4_4bfwh"]
+[ext_resource type="PackedScene" uid="uid://duxjncw0tg5ov" path="res://bubbleArena/bubbleAreana.tscn" id="4_4wbvo"]
+[ext_resource type="PackedScene" uid="uid://h0k8rbv5y06v" path="res://gameManager/game_manager.tscn" id="5_hntjq"]
+[ext_resource type="PackedScene" uid="uid://cfym38hh3imir" path="res://art/visuals/ui/player_scores.tscn" id="6_kgpaf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8sdgx"]
+
+[node name="MainScene" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.877528, 26.2648, 15.2579)
+light_energy = 11.947
+omni_range = 94.519
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.097, 45, 50)
+fov = 80.0
+near = 0.04
+
+[node name="StageFloor" type="StaticBody3D" parent="."]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, -3.14623, -6.83924)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StageFloor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StageFloor"]
+shape = SubResource("BoxShape3D_8sdgx")
+
+[node name="Background" type="StaticBody3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 20.3497, -36.269)
+
+[node name="Sprite3D" type="Sprite3D" parent="Background"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("3_06gdc")
+
+[node name="Bubble" parent="." instance=ExtResource("4_4wbvo")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 40, -5.62927)
+
+[node name="Player" parent="." instance=ExtResource("3_7p3qw")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.4787, 36.1385, -5.62927)
+axis_lock_linear_z = true
+motion_mode = 0
+
+[node name="Player2" parent="." instance=ExtResource("3_7p3qw")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.9258, 36.1385, -5.62927)
+axis_lock_linear_z = true
+motion_mode = 0
+player_id = 2
+
+[node name="GameManager" parent="." instance=ExtResource("5_hntjq")]
+unique_name_in_owner = true
+
+[node name="PlayerScores" parent="GameManager" instance=ExtResource("6_kgpaf")]
+
+[node name="TimeCounter" parent="GameManager" instance=ExtResource("1_o0xwp")]
+
+[node name="crate" parent="." node_paths=PackedStringArray("game_manager") instance=ExtResource("4_4bfwh")]
+game_manager = NodePath("../GameManager")
+
+[connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
+[connection signal="destroy" from="Bubble" to="Player2" method="_on_bubble_destroy"]
+[connection signal="roundOver" from="GameManager/TimeCounter" to="GameManager" method="_on_time_counter_round_over"]

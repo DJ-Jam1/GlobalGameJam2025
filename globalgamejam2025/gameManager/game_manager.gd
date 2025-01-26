@@ -14,6 +14,11 @@ var win_condition_label = Label
 
 
 func _ready():
+	
+	
+	
+
+
 	win_condition_contatiner = $PlayerScores/WinCondition
 	win_condition_label = $PlayerScores/WinCondition/Label
 	player_1_label = $PlayerScores/PlayerOneScore/Label
@@ -23,6 +28,8 @@ func _ready():
 		var player = players[0]  # Assuming there's only one player
 		#print(player)  # This should print the player node
 		_delay_player_input()
+	
+		
 		
 	
 
@@ -38,9 +45,11 @@ func _on_timer_timeout() -> void:
 		player.set_input_enabled(true)  # Enable movement after delay
 		print("Player input is now enabled.")
 		
+		
 
 
 func _on_crate_add_score_1() -> void:
+	print("Received signal: addScore1")
 	var toalScore = player_1_score
 	if toalScore < 10:
 		toalScore+=1
@@ -50,6 +59,7 @@ func _on_crate_add_score_1() -> void:
 
 
 func _on_crate_add_score_2() -> void:
+	print("Received signal: addScore2")
 	var toalScore = player_2_score
 	if toalScore < 10:
 		toalScore+=1
@@ -73,3 +83,361 @@ func _on_time_counter_round_over() -> void:
 
 func _on_backto_menu_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+func _on_crate_2_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_2_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_3_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_3_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_4_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_4_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_5_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_5_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_6_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_6_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_7_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_7_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_8_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_8_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_9_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_9_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_10_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+func _on_crate_10_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+func _on_crate_11_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_11_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_12_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_12_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_13_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_13_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_14_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_14_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_15_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_15_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_16_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_16_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_17_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_17_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_18_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_18_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_19_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_19_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_20_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_20_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)
+
+
+func _on_crate_21_add_score_1() -> void:
+	print("Received signal: addScore1")
+	var toalScore = player_1_score
+	if toalScore < 10:
+		toalScore+=1
+		player_1_score = toalScore
+		player_1_label.text = "Player 1 Score: " + str(toalScore)
+
+
+func _on_crate_21_add_score_2() -> void:
+	print("Received signal: addScore2")
+	var toalScore = player_2_score
+	if toalScore < 10:
+		toalScore+=1
+		player_2_score = toalScore
+		player_2_label.text = "Player 2 Score: " + str(toalScore)

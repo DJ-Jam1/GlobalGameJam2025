@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 signal knockback
 
-const NAME = 'player'
+#const NAME = 'player'
 var input_enabled = false  # Initially, input is enabled
 const SPEED = 25
 const JUMP_VELOCITY = 4.5
@@ -35,11 +35,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
 
-		for body  in $hitbox.get_overlapping_bodies():
-			if knockback_wait <= 0 and body.get("NAME")== "crate":
-				emit_signal("knockback");
-				knockback_wait =10;
-		knockback_wait -=1;
+		
 			
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

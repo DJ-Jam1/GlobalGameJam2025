@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c705wbqjxlrb5"]
+[gd_scene load_steps=9 format=3 uid="uid://c705wbqjxlrb5"]
 
 [ext_resource type="PackedScene" uid="uid://bvuqn5fwgyjvk" path="res://art/visuals/ui/TimeCounter.tscn" id="1_o0xwp"]
 [ext_resource type="Texture2D" uid="uid://cv3ntmhbeghvt" path="res://icon.svg" id="3_06gdc"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://duxjncw0tg5ov" path="res://bubbleArena/bubbleAreana.tscn" id="4_4wbvo"]
 [ext_resource type="PackedScene" uid="uid://h0k8rbv5y06v" path="res://gameManager/game_manager.tscn" id="5_hntjq"]
 [ext_resource type="PackedScene" uid="uid://cfym38hh3imir" path="res://art/visuals/ui/player_scores.tscn" id="6_kgpaf"]
-[ext_resource type="PackedScene" uid="uid://2g44y0dqng36" path="res://gameManager/spawner.tscn" id="8_gxg3m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8sdgx"]
 
@@ -43,33 +42,127 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 40, -5.62927)
 
 [node name="Player" parent="." instance=ExtResource("3_7p3qw")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.4787, 36.1385, -5.62927)
+axis_lock_linear_z = true
 motion_mode = 0
 
 [node name="Player2" parent="." instance=ExtResource("3_7p3qw")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.9258, 36.1385, -5.62927)
+axis_lock_linear_z = true
 motion_mode = 0
 player_id = 2
 
-[node name="crate" parent="." instance=ExtResource("4_4bfwh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36.2525, -5.62927)
-collision_mask = 2
-health = 5
-
 [node name="GameManager" parent="." instance=ExtResource("5_hntjq")]
+unique_name_in_owner = true
 
 [node name="PlayerScores" parent="GameManager" instance=ExtResource("6_kgpaf")]
 
 [node name="TimeCounter" parent="GameManager" instance=ExtResource("1_o0xwp")]
 
-[node name="spawner" parent="GameManager" instance=ExtResource("8_gxg3m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 55.5613, 0)
-mob_scene = ExtResource("4_4bfwh")
+[node name="crate" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 99, -6)
+
+[node name="crate2" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6327, 99, -6)
+
+[node name="crate3" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5711, 99, -6)
+
+[node name="crate4" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1789, 186.938, -6)
+
+[node name="crate5" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45129, 216.527, -6)
+
+[node name="crate6" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 221.038, -6)
+
+[node name="crate7" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 199.761, -6)
+
+[node name="crate8" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2041, 200.844, -6)
+
+[node name="crate9" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6752, 204.275, -6)
+
+[node name="crate10" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14023, 160.385, -6)
+
+[node name="crate11" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.27603, 183.099, -6)
+
+[node name="crate12" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 189.158, -6)
+
+[node name="crate13" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9641, 154.627, -6)
+
+[node name="crate14" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9903, 147.423, -6)
+
+[node name="crate15" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5485, 156.44, -6)
+
+[node name="crate16" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.37861, 144.92, -6)
+
+[node name="crate17" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0561, 124.474, -6)
+
+[node name="crate18" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 153.442, -6)
+
+[node name="crate19" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.042, 124.474, -6)
+
+[node name="crate20" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4769, 124.474, -6)
+
+[node name="crate21" parent="." instance=ExtResource("4_4bfwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 124.474, -6)
 
 [connection signal="destroy" from="Bubble" to="Player" method="_on_bubble_destroy"]
 [connection signal="destroy" from="Bubble" to="Player2" method="_on_bubble_destroy"]
-[connection signal="destroy" from="Bubble" to="crate" method="_on_bubble_destroy"]
-[connection signal="knockback" from="Player" to="crate" method="_on_player_knockback"]
-[connection signal="knockback" from="Player2" to="crate" method="_on_player_2_knockback"]
+[connection signal="roundOver" from="GameManager/TimeCounter" to="GameManager" method="_on_time_counter_round_over"]
 [connection signal="addScore1" from="crate" to="GameManager" method="_on_crate_add_score_1"]
 [connection signal="addScore2" from="crate" to="GameManager" method="_on_crate_add_score_2"]
-[connection signal="roundOver" from="GameManager/TimeCounter" to="GameManager" method="_on_time_counter_round_over"]
+[connection signal="addScore1" from="crate2" to="GameManager" method="_on_crate_2_add_score_1"]
+[connection signal="addScore2" from="crate2" to="GameManager" method="_on_crate_2_add_score_2"]
+[connection signal="addScore1" from="crate3" to="GameManager" method="_on_crate_3_add_score_1"]
+[connection signal="addScore2" from="crate3" to="GameManager" method="_on_crate_3_add_score_2"]
+[connection signal="addScore1" from="crate4" to="GameManager" method="_on_crate_4_add_score_1"]
+[connection signal="addScore2" from="crate4" to="GameManager" method="_on_crate_4_add_score_2"]
+[connection signal="addScore1" from="crate5" to="GameManager" method="_on_crate_5_add_score_1"]
+[connection signal="addScore2" from="crate5" to="GameManager" method="_on_crate_5_add_score_2"]
+[connection signal="addScore1" from="crate6" to="GameManager" method="_on_crate_6_add_score_1"]
+[connection signal="addScore2" from="crate6" to="GameManager" method="_on_crate_6_add_score_2"]
+[connection signal="addScore1" from="crate7" to="GameManager" method="_on_crate_7_add_score_1"]
+[connection signal="addScore2" from="crate7" to="GameManager" method="_on_crate_7_add_score_2"]
+[connection signal="addScore1" from="crate8" to="GameManager" method="_on_crate_8_add_score_1"]
+[connection signal="addScore2" from="crate8" to="GameManager" method="_on_crate_8_add_score_2"]
+[connection signal="addScore1" from="crate9" to="GameManager" method="_on_crate_9_add_score_1"]
+[connection signal="addScore2" from="crate9" to="GameManager" method="_on_crate_9_add_score_2"]
+[connection signal="addScore1" from="crate10" to="GameManager" method="_on_crate_10_add_score_1"]
+[connection signal="addScore2" from="crate10" to="GameManager" method="_on_crate_10_add_score_2"]
+[connection signal="addScore1" from="crate11" to="GameManager" method="_on_crate_11_add_score_1"]
+[connection signal="addScore2" from="crate11" to="GameManager" method="_on_crate_11_add_score_2"]
+[connection signal="addScore1" from="crate12" to="GameManager" method="_on_crate_12_add_score_1"]
+[connection signal="addScore2" from="crate12" to="GameManager" method="_on_crate_12_add_score_2"]
+[connection signal="addScore1" from="crate13" to="GameManager" method="_on_crate_13_add_score_1"]
+[connection signal="addScore2" from="crate13" to="GameManager" method="_on_crate_13_add_score_2"]
+[connection signal="addScore1" from="crate14" to="GameManager" method="_on_crate_14_add_score_1"]
+[connection signal="addScore2" from="crate14" to="GameManager" method="_on_crate_14_add_score_2"]
+[connection signal="addScore1" from="crate15" to="GameManager" method="_on_crate_15_add_score_1"]
+[connection signal="addScore2" from="crate15" to="GameManager" method="_on_crate_15_add_score_2"]
+[connection signal="addScore1" from="crate16" to="GameManager" method="_on_crate_16_add_score_1"]
+[connection signal="addScore2" from="crate16" to="GameManager" method="_on_crate_16_add_score_2"]
+[connection signal="addScore1" from="crate17" to="GameManager" method="_on_crate_17_add_score_1"]
+[connection signal="addScore2" from="crate17" to="GameManager" method="_on_crate_17_add_score_2"]
+[connection signal="addScore1" from="crate18" to="GameManager" method="_on_crate_18_add_score_1"]
+[connection signal="addScore2" from="crate18" to="GameManager" method="_on_crate_18_add_score_2"]
+[connection signal="addScore1" from="crate19" to="GameManager" method="_on_crate_19_add_score_1"]
+[connection signal="addScore2" from="crate19" to="GameManager" method="_on_crate_19_add_score_2"]
+[connection signal="addScore1" from="crate20" to="GameManager" method="_on_crate_20_add_score_1"]
+[connection signal="addScore2" from="crate20" to="GameManager" method="_on_crate_20_add_score_2"]
+[connection signal="addScore1" from="crate21" to="GameManager" method="_on_crate_21_add_score_1"]
+[connection signal="addScore2" from="crate21" to="GameManager" method="_on_crate_21_add_score_2"]
